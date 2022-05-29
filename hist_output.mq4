@@ -15,7 +15,7 @@ int start()
   }
 
 //+------------------------------------------------------------------+
-//| Main history output engine                                       |
+//| output function                                                  |
 //+------------------------------------------------------------------+
 void hist_output(string ticker, int tf)   //where tf = timeframe
 {
