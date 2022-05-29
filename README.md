@@ -10,7 +10,7 @@ Algorithmic trading bots - "Deities" Series
 * Created a dynamically linked library (.dll) to handle loop-intensive functions on C++ (e.g. real-time optimisations) and return values to main bot
 
 ## Backtesting indicators
-''
+`&#8212;`
             ' if SL was hit (i.e. treated as SL even if TP was reached on same bar as SL)
             If (EntryPrice - 1.5 * ATR >= MinLow) Then
             
@@ -27,7 +27,7 @@ Algorithmic trading bots - "Deities" Series
             End If
             k = k + 1
             Loop
-''
+`&#8212;`
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
