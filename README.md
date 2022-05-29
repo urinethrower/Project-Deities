@@ -13,12 +13,13 @@ Algorithmic trading bots - "Deities" Series
 ### Method 1
 Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and even **Dukascopy**-the bank/broker. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
 ### Method 2
-Collecting time-series data on MetaTrader 4 is free, using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
+Collecting time-series data on MetaTrader 4 is actually free if you have a demo account with any broker. Using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
   
 Check out my sample code here: [hist_output](https://github.com/urinethrower/Project-Deities/blob/main/hist_output.mq4)  
+  
 Other than basic open-high-low-close (OHLC), one can also output indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient to test strategies that use indicators.  
   
-However,data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
+However, data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
 
 ## Backtesting single criteria trading systems
 
