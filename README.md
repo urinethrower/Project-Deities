@@ -25,7 +25,8 @@ Algorithmic trading bots - "Deities" Series
                     End If
             End If
             k = k + 1
-            Loop'
+            Loop
+'
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
