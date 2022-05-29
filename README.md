@@ -14,5 +14,5 @@ Algorithmic trading bots - "Deities" Series
 * [Live account 2](https://www.mql5.com/en/signals/1350008?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
 
 ## Other technical information
-**Languages used: ** MQL4 (C++ based), C++, Excel (VBA)\
-**Development Environment: ** MetaEditor 4, Visual Studio (MFC), Excel\
+**Languages used:** MQL4 (C++ based), C++, Excel (VBA)  
+**Development Environment:** MetaEditor 4, Visual Studio (MFC), Excel
