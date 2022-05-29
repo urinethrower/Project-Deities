@@ -3,31 +3,57 @@ Algorithmic trading bots - "Deities" Series
 
 # Algorithmic Trading Bot / Expert Advisors: Project Overview
 * Developed 3 trading strategies navigating various markets including forex, stock indices, precious metals and Bitcoin (CFDs)
-* Backtested over 1000 different indicators and settings, and customised over 20 algorithms from existing indicators
+* Backtested over 1000 single-criteria trading systems, and customised over 20 algorithms from existing indicators
 * Strategies including trend-following, confluence trading, grid trading (without Martingale)
 * Implemented risk management system virtually to avoid potential stoploss hunting or other broker manipulations
 * Advanced features including: hedging, equity curve trading, trade filters, dashboard, etc.
 * Created a dynamically linked library (.dll) to handle loop-intensive functions on C++ (e.g. real-time optimisations) and return values to main bot
 
-## Backtesting indicators
+## Data collection
+Collecting time-series data on MetaTrader 4 is relatively convenient, using the native FileWrite function, data downloaded  
+from MetaQuotes can be exported to a csv file. The function looks something like the following:
+```
+void hist_output(string ticker, int tf)                           //where tf = timeframe
+{
+  string filename = ticker + "," + tf + ".csv";
+  int handle = FileOpen(filename, FILE_CSV|FILE_WRITE, ",");
+  if(handle>0)
+    {
+     FileWrite(handle,"Date,Time,Open,High,Low,Close,Volume");   // Adding headers to each column
+     for(int i=iBars(ticker,tf)-1; i>=0; i--)                    // Using ascending date sequence
+       {
+       string date1 = TimeToStr(iTime(ticker,tf,i),TIME_DATE);
+       date1 = StringSubstr(date1,5,2) + "/" + StringSubstr(date1,8,2) + "/" + StringSubstr(date1,0,4);
+       string time1 = TimeToStr(iTime(ticker,tf,i),TIME_MINUTES);
+       FileWrite(handle, date1, time1, iOpen(ticker,tf,i), iHigh(ticker,tf,i), iLow(ticker,tf,i), iClose(ticker,tf,i), iVolume(ticker,tf,i));
+       }
+     FileClose(handle);
+    }
+}
+```
+Noting that the data collected using this method is at most accurate up to 1-Minute, and I would usually output at a even  
+higher timeframe such as 4-hour or 1-day. The reason for not using a more accurate tick data at current stage is to increase  
+testing speed from over 1000 single criteria trading systems. 
+
+## Backtesting single criteria trading systems
 
 ```
-       ' if SL was hit
-       If (EntryPrice - 1.5 * ATR >= MinLow) Then
-            
-       Do While k <= EndR.Row                       'loop until SL is reached in any bar within the trade
-       If (EntryPrice - 1.5 * ATR >= ThisWorkbook.Sheets("input").Cells(k, 5)) Then
-           SL_exit_poor_format = ThisWorkbook.Sheets("input").Range("A" & k)
-                
-           Set SLLookin = Worksheets("signal").UsedRange
-           Set SLFound = SLLookin.Find(what:=SL_exit_poor_format, LookIn:=xlValues, LookAt:=xlPart, MatchCase:=False)
-               If Not SLFound Is Nothing Then
-                   Set SL_R = SLFound               'record the date (in range format)
-                   Exit Do
-               End If
-       End If
-       k = k + 1
-       Loop
+' if SL was hit
+If (EntryPrice - ATR_x * ATR >= MinLow) Then
+
+Do While k <= EndR.Row                       'loop until SL is reached in any bar within the trade
+If (EntryPrice - ATR_x * ATR >= ThisWorkbook.Sheets("input").Cells(k, 5)) Then
+    SL_exit_poor_format = ThisWorkbook.Sheets("input").Range("A" & k)
+
+    Set SLLookin = Worksheets("signal").UsedRange
+    Set SLFound = SLLookin.Find(what:=SL_exit_poor_format, LookIn:=xlValues, LookAt:=xlPart, MatchCase:=False)
+        If Not SLFound Is Nothing Then
+            Set SL_Range = SLFound           'record the date
+            Exit Do
+        End If
+End If
+k = k + 1
+Loop
 ``` 
 
 ## Track my live performance here!
