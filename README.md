@@ -17,9 +17,9 @@ Collecting time-series data on MetaTrader 4 is actually free if you have a demo 
   
 Check out my sample code here: [hist_output](https://github.com/urinethrower/Project-Deities/blob/main/hist_output.mq4)  
   
-Other than basic open-high-low-close (OHLC), one can also output indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient to test strategies that use indicators.  
+Other than basic open-high-low-close (OHLC), one can also export calculated indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient testing indicator-based strategies.  
   
-However, data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
+However, data collected using this method can be accurate up to 1-Minute bars only.
 
 ## Backtesting single criteria trading systems
 
