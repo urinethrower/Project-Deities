@@ -10,27 +10,15 @@ Algorithmic trading bots - "Deities" Series
 * Created a dynamically linked library (.dll) to handle loop-intensive functions on C++ (e.g. real-time optimisations) and return values to main bot
 
 ## Data collection
-Collecting time-series data on MetaTrader 4 is relatively convenient, using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file. The function looks something like the following:
-```
-void hist_output(string ticker, int tf)                           //where tf = timeframe
-{
-  string filename = ticker + "," + tf + ".csv";
-  int handle = FileOpen(filename, FILE_CSV|FILE_WRITE, ",");
-  if(handle>0)
-    {
-     FileWrite(handle,"Date,Time,Open,High,Low,Close,Volume");   // Adding headers to each column
-     for(int i=iBars(ticker,tf)-1; i>=0; i--)                    // Using ascending date sequence
-       {
-       string date1 = TimeToStr(iTime(ticker,tf,i),TIME_DATE);
-       date1 = StringSubstr(date1,5,2) + "/" + StringSubstr(date1,8,2) + "/" + StringSubstr(date1,0,4);
-       string time1 = TimeToStr(iTime(ticker,tf,i),TIME_MINUTES);
-       FileWrite(handle, date1, time1, iOpen(ticker,tf,i), iHigh(ticker,tf,i), iLow(ticker,tf,i), iClose(ticker,tf,i), iVolume(ticker,tf,i));
-       }
-     FileClose(handle);
-    }
-}
-```
-Data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
+### Method 1
+Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and even **Dukascopy**-the bank/broker. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
+### Method 2
+Collecting time-series data on MetaTrader 4 is free, using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
+  
+Check out my sample code here: [hist_output](https://github.com/urinethrower/Project-Deities/blob/main/hist_output.mq4)  
+Other than basic open-high-low-close (OHLC), one can also output indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient to test strategies that use indicators.  
+  
+However,data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
 
 ## Backtesting single criteria trading systems
 
