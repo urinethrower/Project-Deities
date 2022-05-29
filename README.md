@@ -10,8 +10,7 @@ Algorithmic trading bots - "Deities" Series
 * Created a dynamically linked library (.dll) to handle loop-intensive functions on C++ (e.g. real-time optimisations) and return values to main bot
 
 ## Data collection
-Collecting time-series data on MetaTrader 4 is relatively convenient, using the native FileWrite function, data downloaded  
-from MetaQuotes can be exported to a csv file. The function looks something like the following:
+Collecting time-series data on MetaTrader 4 is relatively convenient, using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file. The function looks something like the following:
 ```
 void hist_output(string ticker, int tf)                           //where tf = timeframe
 {
@@ -31,9 +30,7 @@ void hist_output(string ticker, int tf)                           //where tf = t
     }
 }
 ```
-Noting that the data collected using this method is at most accurate up to 1-Minute, and I would usually output with a even  
-higher timeframe such as 4-hour or 1-day. The reason for not using a more accurate tick data at current stage is to increase  
-testing speed. 
+Data collected using this method can only be accurate up to 1-Minute bars, for which I have decided to sacrifice some accuracy for increased testing speed.
 
 ## Backtesting single criteria trading systems
 
