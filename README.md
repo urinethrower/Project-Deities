@@ -10,7 +10,8 @@ Algorithmic trading bots - "Deities" Series
 * Created a dynamically linked library (.dll) to handle loop-intensive functions on C++ (e.g. real-time optimisations) and return values to main bot
 
 ## Backtesting indicators
-'        ' if SL was hit (i.e. treated as SL even if TP was reached on same bar as SL)
+'
+        ' if SL was hit (i.e. treated as SL even if TP was reached on same bar as SL)
         If (EntryPrice - 1.5 * ATR >= MinLow) Then
             
             Do While k <= EndR.Row                       'loop until SL is reached in any bar within the trade
