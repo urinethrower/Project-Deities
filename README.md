@@ -31,9 +31,9 @@ void hist_output(string ticker, int tf)                           //where tf = t
     }
 }
 ```
-Noting that the data collected using this method is at most accurate up to 1-Minute, and I would usually output at a even  
+Noting that the data collected using this method is at most accurate up to 1-Minute, and I would usually output with a even  
 higher timeframe such as 4-hour or 1-day. The reason for not using a more accurate tick data at current stage is to increase  
-testing speed from over 1000 single criteria trading systems. 
+testing speed. 
 
 ## Backtesting single criteria trading systems
 
