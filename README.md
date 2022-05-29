@@ -12,7 +12,6 @@ Algorithmic trading bots - "Deities" Series
 ## Backtesting indicators
 
 ```
-{
        ' if SL was hit
        If (EntryPrice - 1.5 * ATR >= MinLow) Then
             
@@ -29,7 +28,6 @@ Algorithmic trading bots - "Deities" Series
        End If
        k = k + 1
        Loop
-}
 ``` 
 
 ## Track my live performance here!
