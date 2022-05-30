@@ -13,26 +13,28 @@ Algorithmic trading bots - "Deities" Series
 ### Method 1
 Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and even **Dukascopy**-the bank/broker. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
 ### Method 2
-Collecting time-series data on MetaTrader 4 is actually free if you have a demo account with any broker. Using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
+Collecting time-series data on MetaTrader 4 is actually free after setting up a demo account with any broker. Using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
   
 Check out my sample code here: [hist_output](https://github.com/urinethrower/Project-Deities/blob/main/hist_output.mq4)  
   
 Other than basic open-high-low-close (OHLC), one can also export calculated indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient testing indicator-based strategies.  
   
-However, data collected using this method can be accurate up to 1-Minute bars only.
+However, data collected using this method can only be accurate up to 1-Minute bars.
 
 ## Backtesting single criteria trading systems
-
+Time series data in csv can be easily manipulated with Excel. But in order to compare performances between trading systems, some implementations of VBA might be helpful in calculating metrics like win rate, drawdown, profit factor or average consecutive wins/losses.  
+  
+Following is a short excerpt from my programme, which shows one of the guard causes I used to classify trades in different exit types and recording the day exiting the position.
 ```
 ' if SL was hit
-If (EntryPrice - ATR_x * ATR >= MinLow) Then
+If (EntryPrice - SL_in_pips >= MinLow) Then
 
 Do While k <= EndR.Row                       'loop until SL is reached in any bar within the trade
-If (EntryPrice - ATR_x * ATR >= ThisWorkbook.Sheets("input").Cells(k, 5)) Then
-    SL_exit_poor_format = ThisWorkbook.Sheets("input").Range("A" & k)
+If (EntryPrice - SL_in_pips >= ThisWorkbook.Sheets("input").Cells(k, 5)) Then
+    SL_exit = ThisWorkbook.Sheets("input").Range("A" & k)
 
     Set SLLookin = Worksheets("signal").UsedRange
-    Set SLFound = SLLookin.Find(what:=SL_exit_poor_format, LookIn:=xlValues, LookAt:=xlPart, MatchCase:=False)
+    Set SLFound = SLLookin.Find(what:=SL_exit, LookIn:=xlValues, LookAt:=xlPart, MatchCase:=False)
         If Not SLFound Is Nothing Then
             Set SL_Range = SLFound           'record the date
             Exit Do
