@@ -24,7 +24,7 @@ However, data collected using this method can only be accurate up to 1-Minute ba
 ## Backtesting single criteria trading systems
 Time series data in csv can be easily manipulated with Excel. But in order to compare performances between trading systems, some implementations of VBA might be helpful in calculating metrics like win rate, drawdown, profit factor or average consecutive wins/losses.  
   
-Following is a short excerpt from my programme, which shows one of the guard causes I used to classify trades in different exit types and recording the day exiting the position.
+Following is a short excerpt from my programme, which shows one of the guard causes I used to classify trades into different exit types and to record the time when position is closed.
 ```
 ' if SL was hit
 If (EntryPrice - SL_in_pips >= MinLow) Then
@@ -36,7 +36,7 @@ If (EntryPrice - SL_in_pips >= ThisWorkbook.Sheets("input").Cells(k, 5)) Then
     Set SLLookin = Worksheets("signal").UsedRange
     Set SLFound = SLLookin.Find(what:=SL_exit, LookIn:=xlValues, LookAt:=xlPart, MatchCase:=False)
         If Not SLFound Is Nothing Then
-            Set SL_Range = SLFound           'record the date
+            Set SL_Range = SLFound           'record the time
             Exit Do
         End If
 End If
