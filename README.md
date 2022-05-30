@@ -26,7 +26,7 @@ Time series data in csv can be easily manipulated with Excel. But in order to co
   
 Following is a short excerpt from my programme, which shows one of the guard causes I used to classify trades into different exit types and to record the closing time of each position entered by the system.
 ```
-' if SL was hit
+'Stoploss handling
 If (EntryPrice - SL_in_pips >= MinLow) Then
 
 Do While k <= EndR.Row                       'loop until SL is reached in any bar within the trade
