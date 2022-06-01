@@ -43,8 +43,9 @@ End If
 k = k + 1
 Loop
 ``` 
-And this is the main testing interface in Excel:  
+And this is my main testing interface in Excel:  
 ![image1](img/stage1_tester.JPG)
+  
 It iterates various information about all positions entered by the system, and the information calculated are further manipulated and eventually returns performance metrics such as ROI, for each system tested.
 
 ## Building and testing the confluence trading system
