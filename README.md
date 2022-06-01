@@ -24,7 +24,7 @@ However, data collected using this method can only be accurate up to 1-Minute ba
 ## Backtesting single criteria trading systems
 Time series data in csv can be easily manipulated with Excel. But in order to compare performances between trading systems, some implementations of VBA might be helpful in calculating metrics like win rate, drawdown, profit factor or average consecutive wins/losses.  
   
-Following is a short excerpt from my programme, which shows one of the guard causes I used to classify trades into different exit types and to record the closing time of each position entered by the system.
+Following is a short VBA excerpt from my tester, which shows one of the guard causes I have used to classify trades into different exit types as well as recording the close-out time of each system-entered position.
 ```
 'Stoploss handling
 If (EntryPrice - SL_in_pips >= MinLow) Then
@@ -43,6 +43,8 @@ End If
 k = k + 1
 Loop
 ``` 
+And this is the main testing interface in Excel:  
+![image1](img/stage1_tester.JPG)
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
@@ -50,5 +52,5 @@ Loop
 * [Demo account 1](https://www.mql5.com/en/signals/1546848?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
 
 ## Technical information
-**Languages used:** MQL4 (C++ based), C++, Excel (VBA)  
+**Languages used:** MQL4, C++, Excel (VBA)  
 **Development Environment:** MetaEditor 4, Visual Studio (MFC), Excel
