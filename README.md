@@ -45,6 +45,9 @@ Loop
 ``` 
 And this is the main testing interface in Excel:  
 ![image1](img/stage1_tester.JPG)
+It iterates various information about all positions entered by the system, and the information calculated are further manipulated and eventually returns performance metrics such as ROI, for each system tested.
+
+## Building and testing the confluence trading system
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
