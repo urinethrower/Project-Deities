@@ -1,5 +1,5 @@
 # Project-Deities
-Algorithmic trading bots - "Deities" Series
+Algorithmic trading bots - *Deities* Series
   
 # Algorithmic Trading Bot / Expert Advisors: Project Overview
 * Developed 3 trading strategies navigating various markets including forex, stock indices, precious metals and Bitcoin (CFDs)
@@ -54,17 +54,17 @@ It iterates through details of all positions entered by the system, and the info
 * Crossed-asset walk-forward and out-of-sample testing was performed to mitigate risk of over-fitting
 * A dll file was developed for executing loop-intensive functions (as MQL4 is known to be slower than C++)
 * The library was then imported using `#import` fucntion in MQL4
-* Below shows the 3 main bodies of my first system ("Demeter 1.0"):  
+* Below shows the 3 main bodies of my first system (*Demeter 1.0*):  
 ![image2](img/Demeter_code_snap.JPG)
   
 * More features were added afterwards, see below:  
 ![image4](img/Anubis_settings.JPG)
   
-* Through continuous developments, "Demeter 3.1" (check out my [**Live account 1**](#track-my-live-performance-here)) takes up roughly 1,100 lines of codes and executing properly
+* Through continuous developments, *Demeter 3.1* (check out my [**Live account 1**](#track-my-live-performance-here)) takes up roughly 1,100 lines of codes and executing properly
 * Below shows a snapshot of the bot running on virtual server:  
 ![image4](img/Demeter_snapshot.JPG)
   
-* Check out the backtest report on silver/usd in html by clicking [here](https://htmlpreview.github.io/?https://github.com/urinethrower/Project-Deities/blob/main/StrategyTester.htm) (generated from MT4 strategy tester)
+* Check out the backtest report on **Silver/USD** in html by clicking [here](https://htmlpreview.github.io/?https://github.com/urinethrower/Project-Deities/blob/main/StrategyTester.htm) (generated from MT4 strategy tester)
   
 ## Final thoughts
 * Algorithmic trading is superior to manual trading in many ways, such as elimination of psychological factors, human errors, trading hour constraints, as well as improving the speed and accuracy of executions
