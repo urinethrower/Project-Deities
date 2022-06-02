@@ -64,17 +64,14 @@ It iterates through details of all positions entered by the system, and the info
 * Below shows a snapshot of the bot running on virtual server:  
 ![image4](img/Demeter_snapshot.JPG)
   
-Check out the backtest report on silver/usd in html by clicking [here](https://htmlpreview.github.io/?https://github.com/urinethrower/Project-Deities/blob/main/StrategyTester.htm) (generated from MT4 strategy tester)
+* Check out the backtest report on silver/usd in html by clicking [here](https://htmlpreview.github.io/?https://github.com/urinethrower/Project-Deities/blob/main/StrategyTester.htm) (generated from MT4 strategy tester)
   
 ## Final thoughts
 * Algorithmic trading is superior to manual trading in many ways, such as elimination of psychological factors, human errors, trading hour constraints, as well as improving the speed and accuracy of executions
 * Successful deployment of algorithmic trading bots consists of three pillars: strategy, programming, and reliable server
 * While the first 2 factors are rather obvious, the last one is where the devil lies. While your bot doesn't sleep, your server might!
 * Debugging on backtests is not enough, one must also lookout for potential problems that could arise during live deployment, and always think two steps ahead
-* The trick is to build the bot with resilient, memory usage and execution speed in mind 
-
-
-
+* Consider resilience, memory usage and execution speed during developing
   
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
