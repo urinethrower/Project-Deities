@@ -54,11 +54,11 @@ It iterates through details of all positions entered by the system, and the info
 * One dll file was also developed for executing loop-intensive functions (as MQL4 is known to be slower than C++)
 * The library can be imported simply with #import fucntion in MQL4
 * Below shows the 3 main bodies of my first system developed ("Demeter 1.0"), where OnTick() is a function called at each tick downloaded:  
-![image2](img/Demeter code snap.JPG)
+![image2](img/Demeter_code_snap.JPG)
   
-* Through continuous development and addition of features, "Demeter 3.1" shown in my [**Live account 1**](#track-my-live-performance-here!) takes up roughly 1,100 lines of codes and executing properly
+* Through continuous development and addition of features, "Demeter 3.1" shown in my [**Live account 1**](#track-my-live-performance-here) takes up roughly 1,100 lines of codes and executing properly
 * Below is a snapshot of it running live in virtual server:  
-![image3](img/Demeter snapshot.JPG)
+![image3](img/Demeter_snapshot.JPG)
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
