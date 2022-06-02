@@ -11,7 +11,7 @@ Algorithmic trading bots - "Deities" Series
   
 ## Data collection
 ### Method 1
-Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and even **Dukascopy**-the bank/broker. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
+Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and **Dukascopy**. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
 ### Method 2
 Collecting time-series data on MetaTrader 4 is actually free after setting up a demo account with any broker. Using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
   
