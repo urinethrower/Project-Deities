@@ -71,7 +71,7 @@ It iterates through details of all positions entered by the system, and the info
 * Successful deployment of algorithmic trading bots consists of three pillars: strategy, programming, and reliable server
 * While the first 2 factors are rather obvious, the last one is where the devil lies. While your bot doesn't sleep, your server might!
 * Debugging on backtests is not enough, one must also lookout for potential problems that could arise during live deployment, and always think two steps ahead
-* Consider resilience, memory usage and execution speed during developing
+* Consider resilience, memory usage and execution speed while developing
   
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
