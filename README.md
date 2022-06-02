@@ -46,15 +46,25 @@ Loop
 And this is my main testing interface in Excel:  
 ![image1](img/stage1_tester.JPG)
   
-It iterates various information about all positions entered by the system, and the information calculated are further manipulated and eventually returns performance metrics such as ROI, for each system tested.
+It iterates through details of all positions entered by the system, and the information calculated are further manipulated and eventually returns to performance metrics - such as profit factor - for each system tested.
 
-## Building and testing the confluence trading system
+## Building the confluence trading system
+* After single-criteria systems are shortlisted, selected combinations are used to build the confluence system
+* Confluence system was developed and tested on MT4 platform
+* One dll file was also developed for executing loop-intensive functions (as MQL4 is known to be slower than C++)
+* The library can be imported simply with #import fucntion in MQL4
+* Below shows the 3 main bodies of my first system developed ("Demeter 1.0"), where OnTick() is a function called at each tick downloaded:
+![image2](img/Demeter code snap.JPG)
+  
+* Through continuous development and addition of features, "Demeter 3.1" shown in my [**Live account 1**](#Track my live performance here!) takes up roughly 1,100 lines of codes and executing properly
+* Below is a snapshot of it running live:
+![image3](img/Demeter snapshot.JPG)
 
 ## Track my live performance here!
 * [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
 * [Live account 2](https://www.mql5.com/en/signals/1350008?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
 * [Demo account 1](https://www.mql5.com/en/signals/1546848?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
 
-## Technical information
+## Technicals
 **Languages used:** MQL4, C++, Excel (VBA)  
 **Development Environment:** MetaEditor 4, Visual Studio (MFC), Excel
