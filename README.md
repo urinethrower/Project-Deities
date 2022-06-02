@@ -13,11 +13,11 @@ Algorithmic trading bots - "Deities" Series
 ### Method 1
 Test data can be purchased/downloaded from various data providers such as **Darwinex**, **Tick Data Suite** and **Dukascopy**. They can easily offer 10+ years historical data with precision to each tick (i.e. tick data). Data can be downloaded in various formats, including csv.
 ### Method 2
-Collecting time-series data on MetaTrader 4 is actually free after setting up a demo account with any broker. Using the native FileWrite function, data downloaded from MetaQuotes can be exported to a csv file.  
+Collecting time-series data on MetaTrader 4 is actually free after setting up a demo account with any broker. Using the native `FileWrite` function, data downloaded from MetaQuotes can be exported to a csv file.  
   
 Check out my sample code here: [hist_output](https://github.com/urinethrower/Project-Deities/blob/main/hist_output.mq4)  
   
-Other than basic open-high-low-close (OHLC), one can also export calculated indicators' values directly - see my William%R and RSI example in hist_output. Which makes it convenient testing indicator-based strategies.  
+Other than basic open-high-low-close (OHLC), one can also export calculated indicators' values directly - see my **William%R** and **RSI** example in hist_output. Which makes it convenient testing indicator-based strategies.  
   
 However, data collected using this method can only be accurate up to 1-Minute bars.
   
@@ -53,7 +53,7 @@ It iterates through details of all positions entered by the system, and the info
 * Confluence system was developed and tested on MT4 platform
 * Crossed-asset walk-forward and out-of-sample testing was performed to mitigate risk of over-fitting
 * A dll file was developed for executing loop-intensive functions (as MQL4 is known to be slower than C++)
-* The library was then imported using #import fucntion in MQL4
+* The library was then imported using `#import` fucntion in MQL4
 * Below shows the 3 main bodies of my first system ("Demeter 1.0"):  
 ![image2](img/Demeter_code_snap.JPG)
   
