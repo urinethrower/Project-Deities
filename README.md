@@ -58,12 +58,11 @@ It iterates through details of all positions entered by the system, and the info
 ![image2](img/Demeter_code_snap.JPG)
   
 * More features were added afterwards, see below:  
-![image4](img/Anubis_settings.JPG)
+<img src="https://raw.githubusercontent.com/urinethrower/Project-Deities/main/img/Anubis_settings.JPG" alt="https://raw.githubusercontent.com/urinethrower/Project-Deities/main/img/Anubis_settings.JPG" width="615" height="573"></img>  
   
 * Through continuous developments, *Demeter 3.1* (check out my [**Live account 1**](#track-my-live-performance-here)) takes up roughly 1,100 lines of codes and executing properly
 * Below shows a snapshot of the bot running on virtual server:  
-![image4](img/Demeter_snapshot.JPG)
-  
+<img src="https://raw.githubusercontent.com/urinethrower/Project-Deities/main/img/Demeter_snapshot.JPG" alt="https://raw.githubusercontent.com/urinethrower/Project-Deities/main/img/Demeter_snapshot.JPG" width="768" height="480"></img>  
 * Check out the backtest report on **Silver/USD** in html by clicking [here](https://htmlpreview.github.io/?https://github.com/urinethrower/Project-Deities/blob/main/StrategyTester.htm) (generated from MT4 strategy tester)
   
 ## Final thoughts
