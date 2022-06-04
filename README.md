@@ -53,7 +53,7 @@ It iterates through details of all positions entered by the system, and the info
 * Confluence system was developed and tested on MT4 platform
 * Crossed-asset walk-forward and out-of-sample testing was performed to mitigate risk of over-fitting
 * A dll file was developed for executing loop-intensive functions (as MQL4 is known to be slower than C++)
-* The library was then imported using `#import` fucntion in MQL4
+* The library was then imported using `#import` function in MQL4
 * Below shows the 3 main bodies of my first system (*Demeter 1.0*):  
 ![image2](img/Demeter_code_snap.JPG)
   
