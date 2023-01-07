@@ -72,9 +72,8 @@ It iterates through details of all positions entered by the system, and the info
 * Debugging on backtests is not enough, one must also lookout for potential problems that could arise during live deployment, and always think two steps ahead
 * Consider resilience, memory usage and execution speed while developing
   
-## Track my live performance here!
-* [Live account 1](https://www.mql5.com/en/signals/1530022?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
-* [Live account 2](https://www.mql5.com/en/signals/1350008?utm_source=www.twitter.com&utm_campaign=en.signals.sharing.desktop&date=1653775200)
+## My 2022 performance
+![image2](img/2022Performance.JPG)
 
 ## Technicals
 **Languages used:** MQL4, C++, Excel (VBA)  
