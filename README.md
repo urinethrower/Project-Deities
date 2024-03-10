@@ -72,7 +72,7 @@ It iterates through details of all positions entered by the system, and the info
 * Debugging on backtests is not enough, one must also lookout for potential problems that could arise during live deployment, and always think two steps ahead
 * Consider resilience, memory usage and execution speed while developing
   
-## My 2022 performance
+## My 2022-23 performance
 ![image2](img/2023Performance.jpg)
 
 ## Technicals
