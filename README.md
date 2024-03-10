@@ -73,7 +73,7 @@ It iterates through details of all positions entered by the system, and the info
 * Consider resilience, memory usage and execution speed while developing
   
 ## My 2022 performance
-![image2](img/2023Performance.JPG)
+![image2](img/2023Performance.jpg)
 
 ## Technicals
 **Languages used:** MQL4, C++, Excel (VBA)  
